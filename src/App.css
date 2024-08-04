@@ -1,38 +1,152 @@
-.App {
+/* Basic Reset */
+body, h1, h3, ul, li, textarea, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #001f3f;
+  color: #ffffff;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #00aaff;
+}
+
+.genre-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.genre-selector select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #00aaff;
+  background-color: #003366;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.genre-selector select:hover {
+  background-color: #00aaff;
+  border-color: #003366;
+}
+
+.genre-selector select:focus {
+  outline: none;
+  background-color: #00aaff;
+  border-color: #ffffff;
+}
+
+.video-container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.video-container iframe {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.video-container iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.video-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.video-controls button {
+  background-color: #00aaff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.video-controls button:hover {
+  background-color: #003366;
+  transform: scale(1.05);
+}
+
+.notes-section, .questions-section {
+  margin-top: 20px;
+}
+
+.notes-section ul, .questions-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.notes-section li, .questions-section li {
+  background-color: #002f6c;
+  border: 1px solid #00aaff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.notes-section li:hover, .questions-section li:hover {
+  background-color: #00aaff;
+}
+
+.note-taker {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.note-taker textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #00aaff;
+  background-color: #003366;
+  color: #ffffff;
+  margin-bottom: 10px;
+  resize: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-taker button {
+  background-color: #00aaff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.note-taker button:hover {
+  background-color: #003366;
+  transform: scale(1.05);
 }
